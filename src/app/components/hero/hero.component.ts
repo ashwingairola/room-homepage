@@ -12,12 +12,11 @@ import {
 	templateUrl: './hero.component.html',
 	styleUrls: ['./hero.component.scss'],
 	animations: [
-		trigger('slideOutLeft', [
-			state('initial', style({ transform: 'translateX(-100%)', opacity: 0 })),
-			state('final', style({ transform: 'translateX(100%)', opacity: 1 })),
-			transition('initial => *', animate('0.5s'))
-		]),
-		trigger('slideInRight', [transition('initial => *', animate('0.5s'))])
+		trigger('fadeInOut', [
+			state('loading', style({ opacity: 0 })),
+			state('loaded', style({ opacity: 1 })),
+			transition('loading <=> loaded', [animate('0.2s')])
+		])
 	]
 })
 export class HeroComponent implements OnInit {
@@ -46,8 +45,6 @@ export class HeroComponent implements OnInit {
 	];
 
 	currentIndex = 0;
-	movingLeft = false;
-	movingRight = false;
 	imageLoading = false;
 
 	constructor() {}
@@ -55,23 +52,19 @@ export class HeroComponent implements OnInit {
 	ngOnInit(): void {}
 
 	onNavigateLeft(): void {
-		this.movingLeft = true;
 		this.imageLoading = true;
 
 		setTimeout(() => {
 			this.currentIndex--;
-			this.movingLeft = false;
-		}, 0);
+		}, 200);
 	}
 
 	onNavigateRight(): void {
-		this.movingRight = true;
 		this.imageLoading = true;
 
 		setTimeout(() => {
 			this.currentIndex++;
-			this.movingRight = false;
-		}, 0);
+		}, 200);
 	}
 
 	onImageLoading(loading: boolean): void {

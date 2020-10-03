@@ -5,6 +5,16 @@
 	flex-direction: column;
 }
 
+.hero__image-container {
+	position: relative;
+}
+
+.hero__controls {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
 @include gt-mobile {
 	.hero__container {
 		flex-direction: row;
