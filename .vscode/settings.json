@@ -1,0 +1,6 @@
+{
+  "editor.rulers": [80],
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
