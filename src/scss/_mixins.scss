@@ -1,0 +1,11 @@
+@mixin gt-mobile {
+	@media screen and (min-width: 376px) {
+		@content;
+	}
+}
+
+@mixin gt-desktop {
+	@media screen and (min-width: 1441px) {
+		@content;
+	}
+}
