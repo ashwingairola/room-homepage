@@ -1,0 +1,9 @@
+<source media="(min-width: 376px)" [srcset]="_desktopImg" />
+<img
+	#image
+	class="hero__image"
+	[src]="_defaultImg"
+	alt="Hero image"
+	(load)="onImageLoaded()"
+	[@fadeInOut]="imageChanging ? 'loading' : 'loaded'"
+/>

@@ -1,12 +1,16 @@
 @import '~src/scss/mixins';
 
-.hero__container {
+:host {
 	display: flex;
 	flex-direction: column;
 }
 
+.hero__image {
+	width: 100%;
+}
+
 @include gt-mobile {
-	.hero__container {
+	:host {
 		flex-direction: row;
 	}
 }

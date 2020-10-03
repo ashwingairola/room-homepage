@@ -1,17 +1,26 @@
 <section class="hero">
-	<picture>
-		<source
-			media="(min-width: 376px)"
-			srcset="assets/desktop-image-hero-1.jpg"
-		/>
-		<img
-			class="hero__image hero__image--1"
-			src="assets/mobile-image-hero-1.jpg"
-			alt="Hero image 1"
-		/>
-	</picture>
-	<section class="hero__main">
-		<h2 class="text-l hero__title">Discover innovate ways to decorate</h2>
-		<p>Hello</p>
+	<section class="hero__container">
+		<section>
+			<picture
+				app-hero-image
+				[defaultImg]="heroItems[currentIndex].defaultImg"
+				[desktopImg]="heroItems[currentIndex].desktopImg"
+				(imageLoading)="onImageLoading($event)"
+			></picture>
+			<app-hero-controls
+				(navigateLeft)="onNavigateLeft()"
+				(navigateRight)="onNavigateRight()"
+				[disableLeft]="currentIndex === 0 || imageLoading"
+				[disableRight]="currentIndex === heroItems.length - 1 || imageLoading"
+			></app-hero-controls>
+		</section>
+		<section app-hero-item>
+			<h2 class="hero__title text-l mt-m mb-m">
+				{{ heroItems[currentIndex].title }}
+			</h2>
+			<p class="hero__description">
+				{{ heroItems[currentIndex].description }}
+			</p>
+		</section>
 	</section>
 </section>
