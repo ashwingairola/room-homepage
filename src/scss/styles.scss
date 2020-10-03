@@ -7,6 +7,7 @@ body {
 	font-family: 'Spartan', 'Segoe UI';
 	font-weight: 500;
 	font-size: 0.75rem;
+	color: $dark-gray;
 }
 
 h1,
@@ -16,4 +17,5 @@ h4,
 h5,
 h6 {
 	font-weight: 700;
+	color: $black;
 }
