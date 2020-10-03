@@ -1,0 +1,13 @@
+@import 'variables';
+
+.text-l,
+.h2,
+.title {
+	font-size: $l;
+}
+
+.text-s,
+.text,
+.text-normal {
+	font-size: $s;
+}
