@@ -1,0 +1,19 @@
+@import 'reset';
+@import 'variables';
+@import 'typography';
+@import 'utilities';
+
+body {
+	font-family: 'Spartan', 'Segoe UI';
+	font-weight: 500;
+	font-size: 0.75rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+}
