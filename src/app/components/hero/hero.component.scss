@@ -1,3 +1,4 @@
+@import '~src/scss/variables';
 @import '~src/scss/mixins';
 
 .hero__container {
@@ -13,6 +14,22 @@
 	position: absolute;
 	bottom: 0;
 	right: 0;
+}
+
+.hero__content {
+	padding: $m;
+}
+
+.hero__shop-link {
+	margin-top: $xl;
+	letter-spacing: $xs;
+	color: $black;
+	display: inline-block;
+
+	& img {
+		display: inline-block;
+		margin-left: $l;
+	}
 }
 
 @include gt-mobile {

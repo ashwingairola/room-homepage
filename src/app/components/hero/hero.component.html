@@ -15,19 +15,29 @@
 				[disableRight]="currentIndex === heroItems.length - 1 || imageLoading"
 			></app-hero-controls>
 		</section>
-		<section app-hero-item>
-			<h2
-				class="hero__title text-l mt-m mb-m"
+		<section class="hero__content">
+			<section app-hero-item>
+				<h2
+					class="hero__title text-l mt-m mb-m"
+					[@fadeInOut]="imageLoading ? 'loading' : 'loaded'"
+				>
+					{{ heroItems[currentIndex].title }}
+				</h2>
+				<p
+					class="hero__description"
+					[@fadeInOut]="imageLoading ? 'loading' : 'loaded'"
+				>
+					{{ heroItems[currentIndex].description }}
+				</p>
+			</section>
+			<a
+				class="hero__shop-link"
+				href="#"
 				[@fadeInOut]="imageLoading ? 'loading' : 'loaded'"
 			>
-				{{ heroItems[currentIndex].title }}
-			</h2>
-			<p
-				class="hero__description"
-				[@fadeInOut]="imageLoading ? 'loading' : 'loaded'"
-			>
-				{{ heroItems[currentIndex].description }}
-			</p>
+				<span>SHOP NOW</span>
+				<img src="assets/icon-arrow.svg" alt="Go" />
+			</a>
 		</section>
 	</section>
 </section>
