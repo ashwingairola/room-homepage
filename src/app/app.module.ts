@@ -7,6 +7,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { HeroItemComponent } from './components/hero-item/hero-item.component';
 import { HeroControlsComponent } from './components/hero-controls/hero-controls.component';
 import { HeroImageComponent } from './components/hero-image/hero-image.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
 	declarations: [
@@ -14,7 +15,8 @@ import { HeroImageComponent } from './components/hero-image/hero-image.component
 		HeroComponent,
 		HeroItemComponent,
 		HeroControlsComponent,
-		HeroImageComponent
+		HeroImageComponent,
+		AboutComponent
 	],
 	imports: [BrowserModule, BrowserAnimationsModule],
 	providers: [],
