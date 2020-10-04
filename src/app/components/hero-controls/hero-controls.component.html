@@ -1,14 +1,24 @@
-<button
-	class="hero__button"
-	(click)="onNavigateLeft()"
-	[disabled]="disableLeft"
->
-	<img src="assets/icon-angle-left.svg" alt="Go left" />
-</button>
-<button
-	class="hero__button"
-	(click)="onNavigateRight()"
-	[disabled]="disableRight"
->
-	<img src="assets/icon-angle-right.svg" alt="Go right" />
-</button>
+<section class="hero__controls-container">
+	<button
+		class="hero__button"
+		(click)="onNavigateLeft()"
+		[disabled]="disableLeft"
+	>
+		<img
+			class="hero__button-icon"
+			src="assets/icon-angle-left.svg"
+			alt="Go left"
+		/>
+	</button>
+	<button
+		class="hero__button"
+		(click)="onNavigateRight()"
+		[disabled]="disableRight"
+	>
+		<img
+			class="hero__button-icon"
+			src="assets/icon-angle-right.svg"
+			alt="Go right"
+		/>
+	</button>
+</section>

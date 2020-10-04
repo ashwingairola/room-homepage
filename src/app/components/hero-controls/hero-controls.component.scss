@@ -1,18 +1,29 @@
 @import '~src/scss/variables';
 
+.hero__controls-container {
+	display: flex;
+	width: 2 * $xxl;
+}
+
 .hero__button {
-	padding: $m;
-	background-color: $black;
-	color: $white;
+	display: block;
+	padding: 0;
 	height: $xxl;
 	width: $xxl;
+	background-color: $black;
+	color: $white;
 	outline: none;
 	border: none;
 	cursor: pointer;
 	transition: background-color 0.2s;
+	text-align: center;
 }
 
 .hero__button:hover,
 .hero__button:active {
 	background-color: $very-dark-gray;
+}
+
+.hero__button-icon {
+	display: inline;
 }
