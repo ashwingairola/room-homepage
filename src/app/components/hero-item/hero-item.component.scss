@@ -9,7 +9,7 @@
 	width: 100%;
 }
 
-@include gt-mobile {
+@include sm {
 	:host {
 		flex-direction: row;
 	}

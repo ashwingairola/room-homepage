@@ -4,6 +4,7 @@
 .about {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	margin-top: $xl;
 }
 
@@ -22,9 +23,21 @@
 	color: $dark-gray;
 }
 
-@include gt-mobile {
+.about__img {
+	object-fit: cover;
+}
+
+@include sm {
 	.about {
 		flex-direction: row;
 		margin-top: 0;
+	}
+
+	.about__img {
+		max-width: 33.33%;
+	}
+
+	.about__content {
+		max-width: 33.33%;
 	}
 }

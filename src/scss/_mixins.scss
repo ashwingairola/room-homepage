@@ -1,11 +1,29 @@
-@mixin gt-mobile {
-	@media screen and (min-width: 376px) {
+@mixin sm {
+	@media screen and (min-width: 640px) {
 		@content;
 	}
 }
 
-@mixin gt-desktop {
-	@media screen and (min-width: 1441px) {
+@mixin md {
+	@media screen and (min-width: 880px) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media screen and (min-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin xxl {
+	@media screen and (min-width: 1440px) {
 		@content;
 	}
 }

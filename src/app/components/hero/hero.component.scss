@@ -20,6 +20,11 @@
 	padding: $m;
 }
 
+.hero__title {
+	margin-top: $m;
+	margin-bottom: $m;
+}
+
 .hero__shop-link {
 	margin-top: $xl;
 	letter-spacing: $xs;
@@ -32,12 +37,36 @@
 	}
 }
 
-@include gt-mobile {
+@include lg {
 	.hero__container {
 		flex-direction: row;
 	}
 
 	.hero__controls {
 		left: 100%;
+	}
+
+	.hero__content {
+		width: 40%;
+		padding: $l;
+	}
+
+	.hero__title {
+		margin-top: 0;
+	}
+
+	.hero__shop-link {
+		margin-top: $l;
+	}
+}
+
+@include xl {
+	.hero__content {
+		width: 50%;
+		padding: $xl;
+	}
+
+	.hero__shop-link {
+		margin-top: $xl;
 	}
 }
