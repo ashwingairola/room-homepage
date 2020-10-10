@@ -23,6 +23,7 @@
 .hero__title {
 	margin-top: $m;
 	margin-bottom: $m;
+	font-size: $m;
 }
 
 .hero__shop-link {
@@ -64,6 +65,10 @@
 	.hero__content {
 		width: 50%;
 		padding: $xl;
+	}
+
+	.hero__title {
+		font-size: $l;
 	}
 
 	.hero__shop-link {
