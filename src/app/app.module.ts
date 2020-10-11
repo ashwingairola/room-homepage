@@ -8,6 +8,7 @@ import { HeroItemComponent } from './components/hero-item/hero-item.component';
 import { HeroControlsComponent } from './components/hero-controls/hero-controls.component';
 import { HeroImageComponent } from './components/hero-image/hero-image.component';
 import { AboutComponent } from './components/about/about.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
 	declarations: [
@@ -16,7 +17,8 @@ import { AboutComponent } from './components/about/about.component';
 		HeroItemComponent,
 		HeroControlsComponent,
 		HeroImageComponent,
-		AboutComponent
+		AboutComponent,
+		NavbarComponent
 	],
 	imports: [BrowserModule, BrowserAnimationsModule],
 	providers: [],
