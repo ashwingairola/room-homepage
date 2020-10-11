@@ -3,10 +3,33 @@
 		<div class="navbar__logo-container">
 			<img src="assets/logo.svg" alt="room" />
 			<div class="navbar__burger-container">
-				<button class="navbar__burger">
+				<button class="navbar__burger" (click)="onClickBurger()">
 					<img src="assets/icon-hamburger.svg" alt="menu" />
 				</button>
 			</div>
+		</div>
+	</div>
+
+	<div class="navbar__mobile-menu" *ngIf="showMobileMenu">
+		<div class="navbar__mobile-container">
+			<button class="navbar__close" (click)="onClickClose()">
+				<img src="assets/icon-close.svg" alt="close menu" />
+			</button>
+
+			<ul class="navbar__mobile-items">
+				<li class="navbar__item">
+					<a href="#">home</a>
+				</li>
+				<li class="navbar__item">
+					<a href="#">shop</a>
+				</li>
+				<li class="navbar__item">
+					<a href="#">about</a>
+				</li>
+				<li class="navbar__item">
+					<a href="#">contact</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </nav>

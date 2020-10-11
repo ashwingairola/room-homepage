@@ -28,7 +28,8 @@
 	justify-content: center;
 }
 
-.navbar__burger {
+.navbar__burger,
+.navbar__close {
 	background-color: transparent;
 	border: none;
 
@@ -36,5 +37,35 @@
 	&:focus {
 		outline: none;
 		border: none;
+	}
+}
+
+.navbar__mobile-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 200;
+	background-color: $white;
+}
+
+.navbar__mobile-container {
+	padding: $xl $m;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar__mobile-items {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar__item {
+	font-weight: 700;
+	color: $black;
+	margin-left: $m;
+
+	& a {
+		color: inherit;
 	}
 }
