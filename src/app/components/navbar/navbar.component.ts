@@ -116,7 +116,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 		this.overlayRef?.detach();
 	}
 
-	onClickBackdrop(event: Event) {
+	onClickBackdrop(event: Event): void {
 		event.stopPropagation();
 
 		this.showMobileMenu = false;
