@@ -10,28 +10,36 @@
 		</div>
 	</div>
 
-	<div class="navbar__mobile-menu" *ngIf="showMobileMenu">
-		<div class="navbar__mobile-container">
-			<button class="navbar__close" (click)="onClickClose()">
-				<img src="assets/icon-close.svg" alt="close menu" />
-			</button>
+	<ng-template #mobileMenu>
+		<div
+			class="navbar__backdrop"
+			(click)="onClickBackdrop($event)"
+			[@fadeIn]="showMobileMenu ? 'loaded' : 'void'"
+		>
+			<div class="navbar__mobile-menu">
+				<div class="navbar__mobile-container">
+					<button class="navbar__close" (click)="onClickClose()">
+						<img src="assets/icon-close.svg" alt="close menu" />
+					</button>
 
-			<ul class="navbar__mobile-items">
-				<li class="navbar__item">
-					<a href="#">home</a>
-				</li>
-				<li class="navbar__item">
-					<a href="#">shop</a>
-				</li>
-				<li class="navbar__item">
-					<a href="#">about</a>
-				</li>
-				<li class="navbar__item">
-					<a href="#">contact</a>
-				</li>
-			</ul>
+					<ul class="navbar__mobile-items">
+						<li class="navbar__item">
+							<a href="#">home</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#">shop</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#">about</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#">contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-	</div>
+	</ng-template>
 </nav>
 
 <nav class="desktop-nav" #desktopNav>
