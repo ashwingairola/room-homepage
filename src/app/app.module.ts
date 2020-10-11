@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 import { AppComponent } from './app.component';
 import { HeroComponent } from './components/hero/hero.component';
@@ -20,7 +21,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 		AboutComponent,
 		NavbarComponent
 	],
-	imports: [BrowserModule, BrowserAnimationsModule],
+	imports: [BrowserModule, BrowserAnimationsModule, OverlayModule],
 	providers: [],
 	bootstrap: [AppComponent]
 })
