@@ -30,7 +30,9 @@ export class NavbarComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.scroll$
-			.pipe(filter((_: Event) => this.document.documentElement.scrollTop <= 10))
+			.pipe(
+				filter((_: Event) => this.document.documentElement.scrollTop <= 100)
+			)
 			.subscribe(() => {
 				if (this.document.documentElement.scrollTop === 0) {
 					this.renderer.setStyle(
