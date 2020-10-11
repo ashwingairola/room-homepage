@@ -33,3 +33,17 @@ button,
 a {
 	cursor: pointer;
 }
+
+*::-webkit-scrollbar {
+	width: $xs;
+	height: $xs;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 99px;
+	background-color: $dark-gray;
+}
+
+*::-webkit-scrollbar-corner {
+	opacity: 0;
+}
