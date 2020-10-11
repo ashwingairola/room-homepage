@@ -73,7 +73,10 @@
 @include xl {
 	.hero__content {
 		width: 50%;
-		padding: $xl;
+		padding: $xl 2 * $xl;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.hero__title {
