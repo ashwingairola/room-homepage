@@ -35,10 +35,15 @@
 	letter-spacing: $xs;
 	color: $black;
 	display: inline-block;
+	transition: all 0.2s linear;
 
 	& img {
 		display: inline-block;
 		margin-left: $l;
+	}
+
+	&:hover {
+		color: $dark-gray;
 	}
 }
 
